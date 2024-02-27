@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   get 'users/index'
   get 'tops/index'
+  root 'tops#index'
+
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'users/mypage' => 'users#mypage'
+  resources :users
 end

@@ -11,10 +11,28 @@
   </head>
 
   <body>
-  <li><%= button_to "ログアウト", destroy_user_session_path, class:"dropdown-item", method: :delete %></li>
-  
-  <li><%= link_to "新規登録", new_user_registration_path %></li>
-  <li><%= link_to "ログイン", new_user_session_path %></li>
-    <%= yield %>
-  </body>
+  <header class = "header">
+    <a class = "logo" href = "/">Potepan Share</a>
+   
+     
+            <li>施設の新規登録</li>
+            <li>予約済み施設一覧</li>
+            <li>登録済み施設一覧</li>
+            <li><%= link_to "アカウント設定", users_mypage_path(current_user), class:"dropdown-item" %></li>
+            <li><%= button_to "ログアウト", destroy_user_session_path, class:"dropdown-item", method: :delete %></li>
+      </div>
+      <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <li><%= link_to "ログイン", new_user_session_path %></li>
+</header>
+<div class="text-success">
+    <%= flash[:notice] %>
+  </div>
+<div class="text-danger">
+    <%= flash[:alert] %>
+</div>
+
+<%= yield %>
+
+
+</body>
 </html>
