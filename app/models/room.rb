@@ -16,4 +16,10 @@ class Room < ApplicationRecord
   def self.ransackable_associations(auth_object = nil)
       ["reservations", "user"]
   end
+
+
+  def reserved_by?(user)
+    reservations.where(user_id:user.id).exsists?
+end
+
 end

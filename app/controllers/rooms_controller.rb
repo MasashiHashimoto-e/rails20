@@ -1,11 +1,13 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_q, only: [:index, :show]
+  before_action :authenticate_user!
+  before_action :set_q, only: [:index, :show, :search]
 
+  
   def index
-    @rooms = Room.all
+    @user = current_user
     @rooms = Room.where(user_id: current_user.id).includes(:user).order("created_at DESC")
   end
+
 
   def new
     @room = Room.new
