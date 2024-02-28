@@ -49,7 +49,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @room.destroy
     flash.now[:notice] = "施設を削除しました"
-    redirect_to :reservations
+    redirect_to :rooms
   end
 
   def search

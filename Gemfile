@@ -69,4 +69,3 @@ gem 'kaminari'
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.3.0'
-gem 'jquery-turbolinks'
