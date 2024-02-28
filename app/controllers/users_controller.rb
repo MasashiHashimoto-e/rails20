@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   end
 
   def index
+      @rooms = Room.where(user_id: current_user.id).includes(:user).order("created_at DESC")
+      @reservations = Reservation.where(user_id: current_user.id).includes(:user).order("created_at DESC")
   end
 
 

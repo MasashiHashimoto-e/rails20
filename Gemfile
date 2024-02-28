@@ -63,3 +63,6 @@ gem 'devise-i18n'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'carrierwave'
+
+gem 'ransack'
+gem 'kaminari'
