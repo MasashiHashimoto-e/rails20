@@ -10,9 +10,9 @@
                         <ul class = "room-list">
                             <li class = "image"><%= image_tag room.avatar.url,size: "350x250" %></li>
                             <li class = "room-name"><%= room.name %></li>
-                            <li><%= room.address %></>
-                            <li><%= room.introduction.truncate(30) %></li>
-                            <li class = "price">¥<%= room.price %></li>
+                            <li> <%= room.address %></>
+                            <li> <%= room.introduction.truncate(30) %></li>
+                            <li class = "price">¥<%= room.price %>~</li>
                             <li><%= link_to "詳細はこちら", room_path(room.id),class:"btn btn-warning" %><td>
                         </ul>
                         <% end %>

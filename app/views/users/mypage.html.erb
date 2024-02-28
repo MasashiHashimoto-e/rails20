@@ -12,13 +12,13 @@
         <div class = "account-informations">
             <div class = "account-information">アイコン
             <p class = "account-information-value"><%= image_tag @user.image.url, size: '300x200' %></p>
-            </div>
-            <div class = "account-information">名前
-                <p class = "account-information-value"><%= @current_user.user_name %></p>
-            </div>
-            <div class = "account-information">紹介文
-                <p class = "account-information-value"><%= @current_user.user_detail %></p>
-            </div>
         </div>
+        <div class = "account-information">名前
+            <p class = "account-information-value"><%= @current_user.user_name %></p>
+        </div>
+        <div class = "account-information">紹介文
+            <p class = "account-information-value"><%= @current_user.user_detail %></p>
+        </div>
+    </div>
     </div>
 </div>
